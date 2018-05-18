@@ -1,0 +1,1 @@
+pomelo start -D -e development

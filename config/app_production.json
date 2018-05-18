@@ -1,0 +1,47 @@
+{
+  "main": {
+    "mongodb": "mongodb://localhost:27017/wuxia",
+    "redis": "127.0.0.1:6383:LimanquLdt#0529",
+    "redis_token": "127.0.0.1:6379:LimanquLdt#0529",
+    "connector_hosts": ["101.201.78.218", "101.201.78.218"],
+    "client_url": "http://h5static.ledongtian.com/games/wuxia.html",
+    "gc_api_url": "http://gc-api.ledongtian.com",
+    "api_url": "http://wuxia-api.ledongtian.com"
+  },
+  "auth": {
+    "wechat_token": "ledongtian20160419",
+    "wechat_id": "wx6da3c1f636d20ec1",
+    "wechat_secret": "c0f98f45d44f7fe3686a1c5a50aecfd2",
+    "cookie_name": "tk_wuxia",
+    "cookie_domain": "ledongtian.com",
+    "cookie_passwd": "wuxia@ledongtian"
+  },
+  "dataeye" : {
+    "appid": "C87CA2898B23710BA3C64112AB11FA709"
+  },
+  "servers": [
+    {"id": "1",  "name": "泰坦创世", "createdAt": "2016-04-28", "region": "ldt"}
+
+  ],
+  "1758": {
+    "appKey": "56ea2fd6003362c2620165fa9b6388ac",
+    "appSecret": "76c42ac4eb63637d88ebe5229548b41a",
+    "api": {
+      "verify": "http://wx.1758.com/game/platform/v1.0/user/verify",
+      "user": "http://wx.1758.com/game/platform/v1.0/user/query",
+      "friends": "http://wx.1758.com/game/platform/v1.0/user/friends"
+    }
+  },
+  "hortor": {
+    "gameId": "msyxcs",
+    "secret": "ccf645db41552ec20467ac44cb8ae161"
+  },
+  "logger": {
+    "enable": true,
+    "key": "lTmHM34cKuDXB41t",
+    "secret": "YGz4s2e6Bi7FaZow6yw2DMIXUtlR0H",
+    "endpoint": "http://cn-beijing.sls.aliyuncs.com",
+    "store": "online",
+    "project": "wuxia"
+  }
+}

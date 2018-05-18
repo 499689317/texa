@@ -1,0 +1,30 @@
+[2018-05-11 16:28:08.541] [INFO] con-log - [32m[39mdevelopment
+[2018-05-11 16:28:08.542] [INFO] con-log - [32m[39mhttp://127.0.0.1:8081
+[2018-05-11 16:28:09.205] [INFO] con-log - [32m[39m[DB] connected to mongodb server
+[2018-05-11 16:28:09.234] [INFO] con-log - [32m[39m[DB][redis] 127.0.0.1:6379 connected
+[2018-05-11 16:28:09.714] [INFO] con-log - [32m[39m======  server started ok  ======
+[2018-05-11 17:09:13.858] [INFO] con-log - [32m[39mdevelopment
+[2018-05-11 17:09:13.858] [INFO] con-log - [32m[39mhttp://127.0.0.1:8081
+[2018-05-11 17:09:14.532] [INFO] con-log - [32m[39m[DB][redis] 127.0.0.1:6379 connected
+[2018-05-11 17:09:14.566] [INFO] con-log - [32m[39m[DB] connected to mongodb server
+[2018-05-11 17:09:14.983] [INFO] con-log - [32m[39m======  server started ok  ======
+[2018-05-11 17:17:17.164] [INFO] con-log - [32m[39mdevelopment
+[2018-05-11 17:17:17.165] [INFO] con-log - [32m[39mhttp://127.0.0.1:8081
+[2018-05-11 17:17:17.812] [INFO] con-log - [32m[39m[DB] connected to mongodb server
+[2018-05-11 17:17:17.838] [INFO] con-log - [32m[39m[DB][redis] 127.0.0.1:6379 connected
+[2018-05-11 17:17:18.308] [INFO] con-log - [32m[39m======  server started ok  ======
+[2018-05-11 17:32:08.245] [INFO] con-log - [32m[39mdevelopment
+[2018-05-11 17:32:08.245] [INFO] con-log - [32m[39mhttp://127.0.0.1:8081
+[2018-05-11 17:32:08.944] [INFO] con-log - [32m[39m[DB] connected to mongodb server
+[2018-05-11 17:32:08.959] [INFO] con-log - [32m[39m[DB][redis] 127.0.0.1:6379 connected
+[2018-05-11 17:32:09.407] [INFO] con-log - [32m[39m======  server started ok  ======
+[2018-05-11 19:48:20.677] [INFO] con-log - [32m[39mdevelopment
+[2018-05-11 19:48:20.677] [INFO] con-log - [32m[39mhttp://127.0.0.1:8081
+[2018-05-11 19:48:21.266] [INFO] con-log - [32m[39m[DB][redis] 127.0.0.1:6379 connected
+[2018-05-11 19:48:21.297] [INFO] con-log - [32m[39m[DB] connected to mongodb server
+[2018-05-11 19:48:21.677] [INFO] con-log - [32m[39m======  server started ok  ======
+[2018-05-11 19:54:10.103] [INFO] con-log - [32m[39mdevelopment
+[2018-05-11 19:54:10.103] [INFO] con-log - [32m[39mhttp://127.0.0.1:8081
+[2018-05-11 19:54:10.639] [INFO] con-log - [32m[39m[DB][redis] 127.0.0.1:6379 connected
+[2018-05-11 19:54:10.670] [INFO] con-log - [32m[39m[DB] connected to mongodb server
+[2018-05-11 19:54:10.973] [INFO] con-log - [32m[39m======  server started ok  ======

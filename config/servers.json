@@ -1,0 +1,44 @@
+{
+  "development":{
+    "gate": [
+      {"id": "gate",   "host": "127.0.0.1", "port": 36002 }
+    ],
+    "connector": [
+      {"id": "connector", "host": "127.0.0.1", "port": 36150, "clientHost": "127.0.0.1", "clientPort": 36010, "frontend": true}
+    ],
+    "game": [
+      {"id": "game",      "host": "127.0.0.1", "port": 36200}
+    ],
+    "room": [
+      {"id": "room",      "host": "127.0.0.1", "port": 36400}
+    ]
+  },
+  "testing": {
+    "gate": [
+      {"id": "gate",   "host": "127.0.0.1", "port": 36002 }
+    ],
+    "connector": [
+      {"id": "connector", "host": "127.0.0.1", "port": 36150, "clientHost": "127.0.0.1", "clientPort": 36010, "frontend": true}
+    ],
+    "game": [
+      {"id": "game",      "host": "127.0.0.1", "port": 36200}
+    ],
+    "room": [
+      {"id": "room",      "host": "127.0.0.1", "port": 36400}
+    ]
+  },
+  "production": {
+    "gate": [
+      {"id": "gate",   "host": "127.0.0.1", "port": 36002 }
+    ],
+    "connector": [
+      {"id": "connector", "host": "127.0.0.1", "port": 36150, "clientHost": "127.0.0.1", "clientPort": 36010, "frontend": true}
+    ],
+    "game": [
+      {"id": "game",      "host": "127.0.0.1", "port": 36200}
+    ],
+    "room": [
+      {"id": "room",      "host": "127.0.0.1", "port": 36400}
+    ]
+  }
+}

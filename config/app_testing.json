@@ -1,0 +1,31 @@
+{
+  "main": {
+    "mongodb": "mongodb://localhost:27017/minigame",
+    "redis": "127.0.0.1:6379:lhbRedis",
+    "redis_token": "127.0.0.1:6379:lhbRedis",
+    "connector_hosts": ["192.168.10.175", "192.168.10.175"],
+    "client_url": "http://static-test.ledongtian.com/games/minigame.html",
+    "gc_api_url": "http://api-test.ledongtian.com",
+    "api_url": "http://minigame-api-test.ledongtian.com"
+  },
+  "auth": {
+    "wechat_token": "ledongtian20160421",
+    "wechat_id": "wxbdc2a69ae801ecfb",
+    "wechat_secret": "a6f31142aa2621881d19770080a47c8e",
+    "cookie_name": "_t",
+    "cookie_domain": "ledongtian.com",
+    "cookie_passwd": "test@ledongtian"
+  },
+  "servers": [
+    {"id": "1",  "name": "泰坦创世", "createdAt": "2017-11-01", "region": "ldt"}
+  ],
+  "logger": {
+    "enable": true,
+    "key": "lTmHM34cKuDXB41t",
+    "secret": "YGz4s2e6Bi7FaZow6yw2DMIXUtlR0H",
+    "endpoint": "http://cn-beijing.sls.aliyuncs.com",
+    "store": "test",
+    "project": "wow"
+  }
+}
+

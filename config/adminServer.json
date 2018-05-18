@@ -1,0 +1,18 @@
+[
+  {
+    "type": "gate",
+    "token": "5f08c7fbc385f6ae538a9a8c5f3d7b378d9f7816"
+  },
+  {
+    "type": "connector",
+    "token": "5f08c7fbc385f6ae538a9a8c5f3d7b378d9f7816"
+  },
+  {
+    "type": "game",
+    "token": "5f08c7fbc385f6ae538a9a8c5f3d7b378d9f7816"
+  },
+  {
+    "type": "room",
+    "token": "5f08c7fbc385f6ae538a9a8c5f3d7b378d9f7816"
+  }
+]

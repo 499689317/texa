@@ -1,0 +1,105 @@
+[2018-05-11 16:28:07.540] [INFO] con-log - [32m[39mdevelopment
+[2018-05-11 16:28:07.541] [INFO] con-log - [32m[39mhttp://127.0.0.1:8081
+[2018-05-11 16:28:07.814] [INFO] con-log - [32m[39m[DB][redis] 127.0.0.1:6379 connected
+[2018-05-11 16:28:07.832] [INFO] con-log - [32m[39m[DB] connected to mongodb server
+[2018-05-11 16:28:08.093] [INFO] con-log - [32m[39m======  server started ok  ======
+[2018-05-11 17:09:12.581] [INFO] con-log - [32m[39mdevelopment
+[2018-05-11 17:09:12.582] [INFO] con-log - [32m[39mhttp://127.0.0.1:8081
+[2018-05-11 17:09:12.977] [INFO] con-log - [32m[39m[DB] connected to mongodb server
+[2018-05-11 17:09:12.985] [INFO] con-log - [32m[39m[DB][redis] 127.0.0.1:6379 connected
+[2018-05-11 17:09:13.386] [INFO] con-log - [32m[39m======  server started ok  ======
+[2018-05-11 17:17:16.028] [INFO] con-log - [32m[39mdevelopment
+[2018-05-11 17:17:16.028] [INFO] con-log - [32m[39mhttp://127.0.0.1:8081
+[2018-05-11 17:17:16.399] [INFO] con-log - [32m[39m[DB][redis] 127.0.0.1:6379 connected
+[2018-05-11 17:17:16.421] [INFO] con-log - [32m[39m[DB] connected to mongodb server
+[2018-05-11 17:17:16.711] [INFO] con-log - [32m[39m======  server started ok  ======
+[2018-05-11 17:32:07.113] [INFO] con-log - [32m[39mdevelopment
+[2018-05-11 17:32:07.113] [INFO] con-log - [32m[39mhttp://127.0.0.1:8081
+[2018-05-11 17:32:07.509] [INFO] con-log - [32m[39m[DB] connected to mongodb server
+[2018-05-11 17:32:07.517] [INFO] con-log - [32m[39m[DB][redis] 127.0.0.1:6379 connected
+[2018-05-11 17:32:07.777] [INFO] con-log - [32m[39m======  server started ok  ======
+[2018-05-11 17:52:35.727] [INFO] con-log - [32m[39mdevelopment
+[2018-05-11 17:52:35.727] [INFO] con-log - [32m[39mhttp://127.0.0.1:8081
+[2018-05-11 17:52:36.074] [ERROR] con-log - [31m[39m[DB][redis] 127.0.0.1:6379 connect error, stack:Error: Redis connection to 127.0.0.1:6379 failed - connect ECONNREFUSED 127.0.0.1:6379
+    at Object._errnoException (util.js:1022:11)
+    at _exceptionWithHostPort (util.js:1044:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1198:14) Redis connection to 127.0.0.1:6379 failed - connect ECONNREFUSED 127.0.0.1:6379
+Error: Redis connection to 127.0.0.1:6379 failed - connect ECONNREFUSED 127.0.0.1:6379
+    at Object._errnoException (util.js:1022:11)
+    at _exceptionWithHostPort (util.js:1044:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1198:14)
+[2018-05-11 17:52:36.075] [INFO] con-log - [32m[39m[DB] connected to mongodb server
+[2018-05-11 17:52:36.281] [ERROR] con-log - [31m[39m[DB][redis] 127.0.0.1:6379 connect error, stack:Error: Redis connection to 127.0.0.1:6379 failed - connect ECONNREFUSED 127.0.0.1:6379
+    at Object._errnoException (util.js:1022:11)
+    at _exceptionWithHostPort (util.js:1044:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1198:14) Redis connection to 127.0.0.1:6379 failed - connect ECONNREFUSED 127.0.0.1:6379
+Error: Redis connection to 127.0.0.1:6379 failed - connect ECONNREFUSED 127.0.0.1:6379
+    at Object._errnoException (util.js:1022:11)
+    at _exceptionWithHostPort (util.js:1044:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1198:14)
+[2018-05-11 17:52:36.628] [ERROR] con-log - [31m[39m[DB][redis] 127.0.0.1:6379 connect error, stack:Error: Redis connection to 127.0.0.1:6379 failed - connect ECONNREFUSED 127.0.0.1:6379
+    at Object._errnoException (util.js:1022:11)
+    at _exceptionWithHostPort (util.js:1044:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1198:14) Redis connection to 127.0.0.1:6379 failed - connect ECONNREFUSED 127.0.0.1:6379
+Error: Redis connection to 127.0.0.1:6379 failed - connect ECONNREFUSED 127.0.0.1:6379
+    at Object._errnoException (util.js:1022:11)
+    at _exceptionWithHostPort (util.js:1044:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1198:14)
+[2018-05-11 17:52:37.210] [ERROR] con-log - [31m[39m[DB][redis] 127.0.0.1:6379 connect error, stack:Error: Redis connection to 127.0.0.1:6379 failed - connect ECONNREFUSED 127.0.0.1:6379
+    at Object._errnoException (util.js:1022:11)
+    at _exceptionWithHostPort (util.js:1044:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1198:14) Redis connection to 127.0.0.1:6379 failed - connect ECONNREFUSED 127.0.0.1:6379
+Error: Redis connection to 127.0.0.1:6379 failed - connect ECONNREFUSED 127.0.0.1:6379
+    at Object._errnoException (util.js:1022:11)
+    at _exceptionWithHostPort (util.js:1044:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1198:14)
+[2018-05-11 17:52:38.196] [ERROR] con-log - [31m[39m[DB][redis] 127.0.0.1:6379 connect error, stack:Error: Redis connection to 127.0.0.1:6379 failed - connect ECONNREFUSED 127.0.0.1:6379
+    at Object._errnoException (util.js:1022:11)
+    at _exceptionWithHostPort (util.js:1044:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1198:14) Redis connection to 127.0.0.1:6379 failed - connect ECONNREFUSED 127.0.0.1:6379
+Error: Redis connection to 127.0.0.1:6379 failed - connect ECONNREFUSED 127.0.0.1:6379
+    at Object._errnoException (util.js:1022:11)
+    at _exceptionWithHostPort (util.js:1044:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1198:14)
+[2018-05-11 17:52:39.870] [ERROR] con-log - [31m[39m[DB][redis] 127.0.0.1:6379 connect error, stack:Error: Redis connection to 127.0.0.1:6379 failed - connect ECONNREFUSED 127.0.0.1:6379
+    at Object._errnoException (util.js:1022:11)
+    at _exceptionWithHostPort (util.js:1044:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1198:14) Redis connection to 127.0.0.1:6379 failed - connect ECONNREFUSED 127.0.0.1:6379
+Error: Redis connection to 127.0.0.1:6379 failed - connect ECONNREFUSED 127.0.0.1:6379
+    at Object._errnoException (util.js:1022:11)
+    at _exceptionWithHostPort (util.js:1044:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1198:14)
+[2018-05-11 17:52:42.718] [ERROR] con-log - [31m[39m[DB][redis] 127.0.0.1:6379 connect error, stack:Error: Redis connection to 127.0.0.1:6379 failed - connect ECONNREFUSED 127.0.0.1:6379
+    at Object._errnoException (util.js:1022:11)
+    at _exceptionWithHostPort (util.js:1044:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1198:14) Redis connection to 127.0.0.1:6379 failed - connect ECONNREFUSED 127.0.0.1:6379
+Error: Redis connection to 127.0.0.1:6379 failed - connect ECONNREFUSED 127.0.0.1:6379
+    at Object._errnoException (util.js:1022:11)
+    at _exceptionWithHostPort (util.js:1044:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1198:14)
+[2018-05-11 17:52:47.551] [ERROR] con-log - [31m[39m[DB][redis] 127.0.0.1:6379 connect error, stack:Error: Redis connection to 127.0.0.1:6379 failed - connect ECONNREFUSED 127.0.0.1:6379
+    at Object._errnoException (util.js:1022:11)
+    at _exceptionWithHostPort (util.js:1044:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1198:14) Redis connection to 127.0.0.1:6379 failed - connect ECONNREFUSED 127.0.0.1:6379
+Error: Redis connection to 127.0.0.1:6379 failed - connect ECONNREFUSED 127.0.0.1:6379
+    at Object._errnoException (util.js:1022:11)
+    at _exceptionWithHostPort (util.js:1044:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1198:14)
+[2018-05-11 17:52:55.764] [ERROR] con-log - [31m[39m[DB][redis] 127.0.0.1:6379 connect error, stack:Error: Redis connection to 127.0.0.1:6379 failed - connect ECONNREFUSED 127.0.0.1:6379
+    at Object._errnoException (util.js:1022:11)
+    at _exceptionWithHostPort (util.js:1044:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1198:14) Redis connection to 127.0.0.1:6379 failed - connect ECONNREFUSED 127.0.0.1:6379
+Error: Redis connection to 127.0.0.1:6379 failed - connect ECONNREFUSED 127.0.0.1:6379
+    at Object._errnoException (util.js:1022:11)
+    at _exceptionWithHostPort (util.js:1044:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1198:14)
+[2018-05-11 19:48:19.689] [INFO] con-log - [32m[39mdevelopment
+[2018-05-11 19:48:19.689] [INFO] con-log - [32m[39mhttp://127.0.0.1:8081
+[2018-05-11 19:48:19.951] [INFO] con-log - [32m[39m[DB][redis] 127.0.0.1:6379 connected
+[2018-05-11 19:48:19.972] [INFO] con-log - [32m[39m[DB] connected to mongodb server
+[2018-05-11 19:48:20.227] [INFO] con-log - [32m[39m======  server started ok  ======
+[2018-05-11 19:54:09.179] [INFO] con-log - [32m[39mdevelopment
+[2018-05-11 19:54:09.180] [INFO] con-log - [32m[39mhttp://127.0.0.1:8081
+[2018-05-11 19:54:09.440] [INFO] con-log - [32m[39m[DB][redis] 127.0.0.1:6379 connected
+[2018-05-11 19:54:09.459] [INFO] con-log - [32m[39m[DB] connected to mongodb server
+[2018-05-11 19:54:09.679] [INFO] con-log - [32m[39m======  server started ok  ======
