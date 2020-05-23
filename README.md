@@ -1,21 +1,8 @@
-# nodejs拓展c++模块
-
-## 2018/03/26
-
-+ http://dl.mongodb.org/dl/osx/x86_64下载mongodb
-+ .ssh下创建config文件
-	Host minitest
-    hostname x.x.x.x
-    user root
-+ 连接测试服ssh minitest
-+ 进入pomelo后台shell
-	pomelo-cli -h 127.0.0.1 -P 3019 -u admin -p admin
-+ 杀掉进程：kill all
-+ 启动进程：pomelo start -D -e testing
+# pomelo拓展c++模块
 
 ## 2018/03/27
-+ pomelo中文文档：https://github.com/NetEase/pomelo/wiki/Home-in-Chinese
-+ 系列封装的工具库underscore: http://www.bootcss.com/p/underscore/#pick
++ pomelo：https://github.com/NetEase/pomelo/wiki/Home-in-Chinese
++ underscore: http://www.bootcss.com/p/underscore/#pick
 + sprintf-js: 一个类似于jquery的dom库
 + moment: nodejs的一个日期处理库
 + nconf: 配置文件管理库
@@ -23,7 +10,6 @@
 + pomelo-schedule: pomelo刲装的一个类似于crontab的组件
 
 + pomelo
-	. // pomelo文件目录说明
 	. app = require("pomelo").createApp();// 相当于创建了一个管理进程（主进程概念）
 	. // 环境设置方法
 	. app.set();
@@ -33,14 +19,6 @@
 	. // rpc调用的方式(用于进程间rpc调用)
 	. app.rpc.服务器名.remote句柄;
 	. app.rpcInvoke(sid, msg, cb);
-+ mongodb的连接客户端
-+ redis连接客户端
-
-## 2018/03/28
-
-## 2018/03/29
-
-+ 使用pomelo-node-tcp-client实现一个项目测试环境
 
 ## 2018/03/30
 
@@ -48,22 +26,18 @@
 	frontendId: 前端服务器id
 	uniId: 玩家平台id
 	uid: 玩家角色id===player.id，只有bind()后才能调用getByUid()
+
 + mongoose操作
-	定义及基本概念
-	Schema(纯洁的数据库模型),Model数据管理的类,Entity关系：
-	Schema生成Model,Model创建Entity,Model与Entity都可操作数据库，但是Model比Entity更具操作性。
+	Schema(纯洁的数据库模型),Model数据管理的类,Entity关系：Schema生成Model,Model创建Entity,Model与Entity都可操作数据库，但是Model比Entity更具操作性。
 	定义一个Schema: var schema = new mongoose.Schema({name:String});
-	注：schema上可挂载自定义方法，实例方法，schema.methods.func = func;
-							  静态方法，schema.statics.func = func;
+	注：schema上可挂载自定义方法，实例方法，schema.methods.func = func;静态方法，schema.statics.func = func;
 	定义一个Model: var model = db.model("Modelname", schema);
 	定义一个Entity: var entity = new model({name:"小明"});// 就是一个Model的实例
 	注：entity上并不具备Model的方法，只能用自已的方法。
 
 + pomelo架构的部分概念
-1. channelServer: 只是pomelo启动后的一个js类，并不是一个服务器节点，不要被名字骗了
-	用于创建各服务节点所属的channel
-2. sessionServer/backendSessionServer: 也是服务器启动后的js类
-	用于各节点维护session会话
+1. channelServer: 只是pomelo启动后的一个js类，并不是一个服务器节点，不要被名字骗了，用于创建各服务节点所属的channel
+2. sessionServer/backendSessionServer: 也是服务器启动后的js类，用于各节点维护session会话
 
 ## 2018/04/02
 
@@ -82,25 +56,18 @@
 	节省存储空间
 	操作与传输速度非常快
 + 读写Buffer缓冲区：
-	在对buffer数据重新编码写入缓冲区时：	
-	用writeInt8写入值包含中文的buffer会报错，这时要用writeUInt8方法，原因是在utf-8编码下，中文占了3个字节
+	在对buffer数据重新编码写入缓冲区时，用writeInt8写入值包含中文的buffer会报错，这时要用writeUInt8方法，原因是在utf-8编码下，中文占了3个字节
 
-### 对v8进行深入研究整理
-
-1. 基本概念
+### 对v8研究整理
 
 + v8在执行javascript前将脚本编译成了机器码而非字节码或直译，并使用了内联缓存（inline caching）的方式来提高性能，在执行速度上是可以蓖美二进制编译的
 + v8利用为对象创建隐藏类hidden class的方式来提高对js对象属性访问性能，只需要一条指令即可，这里v8已经优化得非常智能了。隐藏类可多个对象共享。
-
 + Isolate: 一个独立的v8 runtime，也可以认为是一个独立的v8实例，包括了自已的堆管理器，gc组件，后续的很多操作都依赖于这个Isolate实例作为上下文传入。
 注：一个给定的Isolate在同一时间只能被一个线程访问，但如果有多个不同的Isolate，就可以给多个线程同时访问。不过，一个Isolate还不足以运行脚本，你还需要一个全局对象，一个执行上下文通过指定一个全局对象来定义一个完整的脚本执行环境。因此，可以有多个执行上下文存在于一个Isolate中，而且它们还可以简单安全地共享它们的全局对象。这是因为这个全局对象实际上属于Isolate，而却这个全局对象被Isolate的互斥锁保护着。
-
 + 三个基本概念：句柄，作用域，上下文环境
 句柄：每一个句柄就是指向一个v8对象的指针，所有的v8对象必须使用句柄来操作，如果一个v8对象没有任何句柄与之关联，则这个对象很快会被垃圾回收器给回收掉
 作用域：可以看成是一个句柄的容器，在一个作用域里可以有很多个句柄，句柄指向的对象是可以一个一个释放的，但很多时候这样太繁琐，取而代之的是释放一个scope，那么在这个scope中的所有handle就被统一释放掉了
 上下文环境：v8提供的一些库函数等等，也可以认为是某种运行环境
-
-2. 引入v8
 
 + 下载v8源码，对源码进行编译，编译后安装好v8引擎就可以直接把v8作为一个普通的动态链接库来使用
 + 安装c++模块构建工具node-gyp：npm install -g node-gyp
@@ -108,7 +75,7 @@
 + 构建c++插件node-gyp configure build生成.node二进制文件
 + 引入.node文件即可调用c++封装的模块
 
-3. v8常用的数据结构(v8暴露给nodejs访问的一些数据类型)
+3. v8常用的数据结构(v8暴露给nodejs访问的一些数据类型)https://www.jianshu.com/p/857b4d38aba1?utm_campaign=maleskine&utm_content=note&utm_medium=pc_all_hots&utm_source=recommendation
 	v8::Exception
 	v8::FunctionCallbackInfo
 	v8::Function
@@ -118,13 +85,11 @@
 	v8::Object
 	v8::String
 	v8::Value
-详细资料：https://www.jianshu.com/p/857b4d38aba1?utm_campaign=maleskine&utm_content=note&utm_medium=pc_all_hots&utm_source=recommendation
-
 
 ## 2018/05/03
 
 + uv_write_t与uv_read_t做好边用边申请，用完就释放的原则
-+ c语言宏定义：do{...}while(0)确保一个块代码，很灵活，灵活个屁
++ c语言宏定义：do{...}while(0)确保一个块代码，很灵活
 
 ## 2018/5/11
 
@@ -140,9 +105,6 @@
 ## 2018/5/12
 
 + 小结nodejs拓展c++模块部份内容
-
-	总体思路
-
 	使用nodejs写游戏服务器情况下去拓展c++模块主要是为了能够将nodejs的单机性能压榨到最大，有这么几种场景，当游戏主要逻辑过于复杂的情况下，nodejs单进程跑有可能会无法满足实际应用需求，一些高实时、高密集计算类型的场景，这时拓展c++模块就显得非常必要了。
 
 	现阶段暂时只是初步想法，所有的游戏模块，包括一些需要高并发支持的场景依然沿用nodejs服务器，比如有游戏各ui模块逻辑，各种玩家角色培养线功能，玩家一些非实时同步的数据等等。在一些密集计算的场景，如rpg的地图、战场、房间等可以拓展c++模块去完成。
@@ -152,19 +114,14 @@
 	v8拓展
 
 	v8主要功能还是为了实现JavaScript与c++互调，v8内部刲装了JavaScript可识别的数据类型。v8将JavaScript代码导入进来进行重新编码为可执行的指令，然后开启了一个Isolate实例来跑这些指令。
-
 	这里可以刲装一层中间层供JavaScript与c++互相访问，比如一些参数的传递，函数接口的调用等等。
-
 	这里有一种新的拓展写法，先使用nodejs实现各种逻辑，然后导入到v8内部开启单独的线程启动新的Isolate实例来跑。我这一块暂时不想这么弄，因为拓展c++模块主要的目的还是希望能用c++来完成这些逻辑，如果使用这种思路的话就失去了拓展的先天优势。后期有时间可以这么尝试一下。
-
 	在v8内部提供了大量的类似JavaScript的数据类型及导出函数。依赖v8去作拓展需要按照v8的文档来执行他们的语言特性，这一层我暂时只是仅仅做为一个桥接层看待，不想在v8的层面上做过多的逻辑。
 
 	libuv拓展
 
 	libuv拓展是我现在使用的拓展模式，所有拓展的模式以libuv为基础，c++原生编程为主来做拓展。这么做的好处很多，可以尽可能压榨执行性能，拓展性也特别强，不会被v8的各种奇怪的数据类型干扰。
-
 	现阶段我主要完成了libuv新事件循环的开启、基于libuv的网络库的tcp服务器拓展、基于libuv的线程及线程池开启、引入了一个libuv内部的QUEUE队列和一个定时器的刲装。
-
 	开启事件循环一种是与nodejs使用同一个事件循环(默认循环)，也可以开启一个新的事件循环。
 	网络库主要是对uv_tcp_t句柄的再加工，把内部read与write进行了一系列的处理及维护客户端的socket实例，具体可以看刲的源码
 	对线程的引入主要还要用原生pthread，线程池使用libuv刲装的uv_queue_work来实现
@@ -209,9 +166,3 @@
 	1. 拓展自已的技术方向
 	2. 寻找更好的服务器架构方案
 	3. 真正做到脱离nodejs，开辟c++服务器编程，满足高性能要求业务（还是有很多问题要解决，c++还是太复杂了）
-
-
-
-
-
-
