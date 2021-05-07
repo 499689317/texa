@@ -10,7 +10,7 @@
     "gulp-imageoptim": "^0.3.3",
     "gulp-intercept": "^0.1.0",
     "gulp-sync": "^0.1.4",
-    "lodash": "^3.10.0",
+    "lodash": "^4.17.21",
     "streamqueue": "^1.1.0",
     "yargs": "^3.15.0"
   },
