@@ -37,7 +37,7 @@
     "sprintf-js": "^1.0.3",
     "underscore": "^1.8.3",
     "underscore.string": "^3.3.4",
-    "validator": "^5.2.0",
+    "validator": "^13.7.0",
     "wechat-api": "^1.27.1",
     "wechat-mp": "^0.2.7",
     "wechat-oauth": "latest"
