@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "aliyun-sdk": "^1.8.3",
-    "async": "^1.5.2",
+    "async": "^2.6.4",
     "cookie-parser": "^1.4.1",
     "cors": "^2.7.1",
     "crc": "^3.4.0",
