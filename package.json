@@ -23,7 +23,7 @@
     "extend": "^3.0.0",
     "hiredis": "^0.4.1",
     "moment": "^2.10.0",
-    "mongoose": "^4.4.12",
+    "mongoose": "^4.13.21",
     "mongoose-auto-increment": "^5.0.1",
     "nconf": "^0.8.4",
     "pomelo": "latest",
